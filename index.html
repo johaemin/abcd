@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>소노호텔앤리조트</title>
+        <!-- jquery -->
+        <script src="./js/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="./css/jquery-ui.css"> -->
+        <link rel="stylesheet" href="https://resources/demos/style.css">
+        <!-- swiper -->
+        <link rel="stylesheet" href="./css/swiper.css">
+        <script src="./js/swiper.js"></script>
+        <!-- common css -->
+        <link rel="stylesheet" href="./css/common.css">
+        <!-- index js -->
+        <script src="./js/index.js"></script>
+        <script src="./js/hotel_option.js"></script>
+        <script src="./js/datepicker.js"></script>
+        <!-- pc css -->
+        <link rel="stylesheet" href="./css/pc.css">
+        <!-- laptop css -->
+        <link rel="stylesheet" href="./css/laptop.css">
+        <!-- tab css -->
+        <link rel="stylesheet" href="./css/tab.css">
+        <!-- mobile css -->
+        <link rel="stylesheet" href="./css/mobile.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <div class="container-1200">
+                    <div id="header_logo">
+                        <a href="#">
+                            <img src="./img/logo.svg" alt="로고">
+                            <img src="./img/logo_white.png" alt="화이트로고">
+                        </a>
+                    </div>
+                    <div id="header_box">
+                        <div id="header_top">
+                            <ul>
+                                <li><a href="#">로그인</a></li>
+                                <li><a href="#">회원가입</a></li>
+                                <li><a href="#">예약조회</a></li>
+                            </ul>
+                        </div>
+                        <div id="header_bot">
+                            <ul id="menu">
+                                <li>
+                                    <a href="#">통합예약</a>
+                                    <div class="sub_menu_box">
+                                        <div class="sub_menu_left">
+                                            <h3>통합예약</h3>
+                                        </div>
+                                        <div class="sub_menu_right">
+                                            <ul>
+                                                <li><a href="#">빠른예약</a></li>
+                                                <li><a href="#">객실예약</a></li>
+                                                <li><a href="#">상품권 / 이용권 구매</a></li>
+                                                <li><a href="#">오션월드 예약</a></li>
+                                                <li><a href="#">캠핑&글램핑 예약</a></li>
+                                                <li><a href="#">전지역 객실 현황</a></li>
+                                                <li><a href="#">워터파크 예약</a></li>
+                                                <li><a href="#">셀프 바베큐 예약</a></li>
+                                                <li><a href="#">셔틀버스 예약</a></li>
+                                                <li><a href="#">세트권 객실 예약</a></li>
+                                                <li><a href="#">다이닝 예약</a></li>
+                                                <li><a href="#">소노플러스 구매</a></li>
+                                                <li><a href="#">패키지 예약</a></li>
+                                                <li><a href="#">모바일 코인 예약</a></li>
+                                                <li><a href="#">예약 조회 / 취소</a></li>
+                                                <li><a href="#">비회원 예약 조회 / 취소</a></li>
+                                                <li><a href="#">법인 / 우대권 객실 예약</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">테마여행</a>
+                                    <div class="sub_menu_box">
+                                        <div class="sub_menu_left">
+                                            <h3>테마여행</h3>
+                                        </div>
+                                        <div class="sub_menu_right">
+                                            <ul>
+                                                <li><a href="#">워터파크</a></li>
+                                                <li><a href="#">스키&보드</a></li>
+                                                <li><a href="#">골프</a></li>
+                                                <li><a href="#">요트</a></li>
+                                                <li><a href="#">테라피&스파</a></li>
+                                                <li><a href="#">웨딩</a></li>
+                                                <li><a href="#">국내여행</a></li>
+                                                <li><a href="#">승마</a></li>
+                                                <li><a href="#">비즈니스</a></li>
+                                                <li><a href="#">해외여행</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">스페셜오퍼</a>
+                                    <div class="sub_menu_box">
+                                        <div class="sub_menu_left">
+                                            <h3>스페셜 오퍼</h3>
+                                        </div>
+                                        <div class="sub_menu_right">
+                                            <ul>
+                                                <li><a href="#">리조트 이벤트</a></li>
+                                                <li><a href="#">호텔 이벤트</a></li>
+                                                <li><a href="#">당첨자 발표</a></li>
+                                                <li><a href="#">객실 프로모션</a></li>
+                                                <li><a href="#">식음 프로모션</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">분양안내</a>
+                                    <div class="sub_menu_box">
+                                        <div class="sub_menu_left">
+                                            <h3>분양안내</h3>
+                                        </div>
+                                        <div class="sub_menu_right">
+                                            <ul>
+                                                <li><a href="#">이용절차</a></li>
+                                                <li><a href="#">예약안내</a></li>
+                                                <li><a href="#">추첨 예약안내</a></li>
+                                                <li><a href="#">회원 혜택안내</a></li>
+                                                <li><a href="#">모바일카드</a></li>
+                                                <li><a href="#">소노플러스 안내</a></li>
+                                                <li><a href="#">시설이용약관</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">D멤버스</a>
+                                    <div class="sub_menu_box">
+                                        <div class="sub_menu_left">
+                                            <h3>D멤버스</h3>
+                                        </div>
+                                        <div class="sub_menu_right">
+                                            <ul>
+                                                <li><a href="#">D멤버스 소개</a></li>
+                                                <li><a href="#">D멤버스 혜택</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">고객센터</a>
+                                    <div class="sub_menu_box">
+                                        <div class="sub_menu_left">
+                                            <h3>고객센터</h3>
+                                        </div>
+                                        <div class="sub_menu_right">
+                                            <ul>
+                                                <li><a href="#">공지사항</a></li>
+                                                <li><a href="#">FAQ</a></li>
+                                                <li><a href="#">고객의 말씀</a></li>
+                                                <li><a href="#">분실물 센터</a></li>
+                                                <li><a href="#">Q&A</a></li>
+                                                <li><a href="#">현장 스케치</a></li>
+                                                <li><a href="#">전기차 충전소</a></li>
+                                                <li><a href="#">자료실</a></li>
+                                                <li><a href="#">소노 예약 센터 안내</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="m_burger_con">
+                        <div id="m_burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div id="m_menu_con">
+                        <div class="m_close_con">
+                            <div class="m_logo">
+                                <a href="#">
+                                    <img src="./img/logo_white.png" alt="화이트로고">
+                                </a>
+                            </div>
+                            <div class="m_close_box">
+                                <div class="m_close">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul id="m_menu">
+                            <li>
+                                <a href="#">통합예약</a>
+                                <ul class="m_sub_menu">
+                                    <li><a href="#">빠른예약</a></li>
+                                    <li><a href="#">객실예약</a></li>
+                                    <li><a href="#">상품권 / 이용권 구매</a></li>
+                                    <li><a href="#">오션월드 예약</a></li>
+                                    <li><a href="#">캠핑&글램핑 예약</a></li>
+                                    <li><a href="#">전지역 객실 현황</a></li>
+                                    <li><a href="#">워터파크 예약</a></li>
+                                    <li><a href="#">셀프 바베큐 예약</a></li>
+                                    <li><a href="#">셔틀버스 예약</a></li>
+                                    <li><a href="#">세트권 객실 예약</a></li>
+                                    <li><a href="#">다이닝 예약</a></li>
+                                    <li><a href="#">소노플러스 구매</a></li>
+                                    <li><a href="#">패키지 예약</a></li>
+                                    <li><a href="#">모바일 코인 예약</a></li>
+                                    <li><a href="#">예약 조회 / 취소</a></li>
+                                    <li><a href="#">비회원 예약 조회 / 취소</a></li>
+                                    <li><a href="#">법인 / 우대권 객실 예약</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">테마여행</a>
+                                <ul class="m_sub_menu">
+                                    <li><a href="#">워터파크</a></li>
+                                    <li><a href="#">스키&보드</a></li>
+                                    <li><a href="#">골프</a></li>
+                                    <li><a href="#">요트</a></li>
+                                    <li><a href="#">테라피&스파</a></li>
+                                    <li><a href="#">웨딩</a></li>
+                                    <li><a href="#">국내여행</a></li>
+                                    <li><a href="#">승마</a></li>
+                                    <li><a href="#">비즈니스</a></li>
+                                    <li><a href="#">해외여행</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">스페셜오퍼</a>
+                                <ul class="m_sub_menu">
+                                    <li><a href="#">리조트 이벤트</a></li>
+                                    <li><a href="#">호텔 이벤트</a></li>
+                                    <li><a href="#">당첨자 발표</a></li>
+                                    <li><a href="#">객실 프로모션</a></li>
+                                    <li><a href="#">식음 프로모션</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">분양안내</a>
+                                <ul class="m_sub_menu">
+                                    <li><a href="#">이용절차</a></li>
+                                    <li><a href="#">예약안내</a></li>
+                                    <li><a href="#">추첨 예약안내</a></li>
+                                    <li><a href="#">회원 혜택안내</a></li>
+                                    <li><a href="#">모바일카드</a></li>
+                                    <li><a href="#">소노플러스 안내</a></li>
+                                    <li><a href="#">시설이용약관</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">D멤버스</a>
+                                <ul class="m_sub_menu">
+                                    <li><a href="#">D멤버스 소개</a></li>
+                                    <li><a href="#">D멤버스 혜택</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">고객센터</a>
+                                <ul class="m_sub_menu">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">고객의 말씀</a></li>
+                                    <li><a href="#">분실물 센터</a></li>
+                                    <li><a href="#">Q&A</a></li>
+                                    <li><a href="#">현장 스케치</a></li>
+                                    <li><a href="#">전기차 충전소</a></li>
+                                    <li><a href="#">자료실</a></li>
+                                    <li><a href="#">소노 예약 센터 안내</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <section id="sec1">
+                <video src="./video/Autumn in sono_1.mp4" muted autoplay loop></video>
+                <div id="hotel_box">
+                    <div class="container-1200">
+                        <div id="hotel_con">
+                            <div id="choose" class="hotel_set">
+                                <div class="hotel_text">
+                                    <p>호텔 선택</p>
+                                    <p class="sec1_cursor">
+                                        <img src="./img/icon.png" alt="아이콘">
+                                        <span class="htl_p">호텔을 선택해주세요</span>
+                                    </p>
+                                </div>
+                                <ul class="hotel_choose">
+                                    <li>
+                                        <div class="addr">강원도 홍천군 서면 한치골길 262</div>
+                                        <div class="htl_name">소노펠리체 비발디파크</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">강원도 고성군 토성면 미시령옛길 1153</div>
+                                        <div class="htl_name">소노펠리체 델피노</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">강원도 양양군 손양면 선사유적로 6783</div>
+                                        <div class="htl_name">쏠비치 양양</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">강원도 삼척시 수로부인 길 453</div>
+                                        <div class="htl_name">쏠비치 삼척</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">전라남도 진도군 의신면 초사리 산287</div>
+                                        <div class="htl_name">쏠비치 진도</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">강원도 고성군 토성면 미시령옛길 1153</div>
+                                        <div class="htl_name">소노캄 델피노</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">경기도 고양시 일산동구 태극로 20</div>
+                                        <div class="htl_name">소노캄 고양</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">경기도 고양시 일산동구 태극로 20</div>
+                                        <div class="htl_name">소노캄 고양</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">전남 여수시 오동도로 111</div>
+                                        <div class="htl_name">소노캄 여수</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">경남 거제시 일운면 소동리 115</div>
+                                        <div class="htl_name">소노캄 거제</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">제주특별자치도 서귀포시 표선면 토산리 17</div>
+                                        <div class="htl_name">소노캄 제주</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">강원도 홍천군 서면 한치골길 262</div>
+                                        <div class="htl_name">소노벨 비발디파크</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">충남 천안시 동남구 성남면 용원리 672</div>
+                                        <div class="htl_name">소노벨 천안</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">경상북도 청송군 주왕산면 주왕산로 494-1</div>
+                                        <div class="htl_name">소노벨 청송</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">경상북도 경주시 보문로 402-12</div>
+                                        <div class="htl_name">소노벨 경주</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">전라북도 부안군 변산면 변산해변로 51</div>
+                                        <div class="htl_name">소노벨 변산</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">제주특별자치도 제주시 조천읍 신북로 577</div>
+                                        <div class="htl_name">소노벨 제주</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">베트남 하이퐁</div>
+                                        <div class="htl_name">소노벨 하이퐁</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">강원도 홍천군 서면 한치골길 262</div>
+                                        <div class="htl_name">소노문 비발디파크</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">강원도 고성군 토성면 미시령옛길 1153</div>
+                                        <div class="htl_name">소노문 델피노</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">충북 단양군 단양읍 삼봉로 187-17번</div>
+                                        <div class="htl_name">소노문 단양</div>
+                                    </li>
+                                    <li>
+                                        <div class="addr">경기도 양평군 개군면 신내길7번길 55</div>
+                                        <div class="htl_name">소노휴 양평</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="date" class="hotel_set">
+                                <div class="hotel_text">
+                                    <p class="check_in">숙박기간</p>
+                                    <p><input type="text" id="datepicker1" value="2022.06.10"><span class="wave">~</span><input type="text" id="datepicker2" value="2022.06.13"></p>
+                                </div>
+                            </div>
+                            <div id="room" class="hotel_set">
+                                <div class="hotel_text" id="room_text">
+                                    <p>인원 / 객실</p>
+                                    <p class="sec1_cursor">성인 <span class="number_01">1</span>, 어린이 <span class="number_02">0</span>, 객실 <span class="number_03">1</span></p>
+                                </div>
+                                <ul class="hotel_people">
+                                    <li>
+                                        <div class="people">성인</div>
+                                        <div class="number">
+                                            <div class="btn_box btn_minus btn_minus1">
+                                                <img src="./img/icon-btn2.png" alt="마이너스버튼">
+                                            </div>
+                                            <div class="number_01">1</div>
+                                            <div class="btn_box btn_plus btn_plus1">
+                                                <img src="./img/icon-btn1.png" alt="플러스버튼">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="people">어린이</div>
+                                        <div class="number">
+                                            <div class="btn_box btn_minus2">
+                                                <img src="./img/icon-btn2.png" alt="마이너스버튼">
+                                            </div>
+                                            <div class="number_02">0</div>
+                                            <div class="btn_box btn_plus2">
+                                                <img src="./img/icon-btn1.png" alt="플러스버튼">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="people">객실</div>
+                                        <div class="number">
+                                            <div class="btn_box btn_minus3">
+                                                <img src="./img/icon-btn2.png" alt="마이너스버튼">
+                                            </div>
+                                            <div class="number_03">1</div>
+                                            <div class="btn_box btn_plus3">
+                                                <img src="./img/icon-btn1.png" alt="플러스버튼">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id="people_close">선택완료</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="search" class="hotel_set">
+                                <p>SEARCH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="m_hotel_box">
+                    <div id="m_hotel_btn">
+                        <img src="./img/date.png" alt="숙박검색">
+                    </div>
+                </div> -->
+            </section>
+            <section id="sec2">
+                <div class="sec2_background  open">
+                    <img src="./img/background_01.jpg" alt="배경이미지1">
+                </div>
+                <div class="sec2_background">
+                    <img src="./img/background_02.jpg" alt="배경이미지2">
+                </div>
+                <div class="sec2_background">
+                    <img src="./img/background_03.jpg" alt="배경이미지3">
+                </div>
+                <div class="sec2_background">
+                    <img src="./img/background_04.jpg" alt="배경이미지4">
+                </div>
+                <div class="sec2_background">
+                    <img src="./img/background_05.jpg" alt="배경이미지5">
+                </div>
+                <div class="sec2_background">
+                    <img src="./img/background_06.jpg" alt="배경이미지6">
+                </div>
+                <div class="container-1200">
+                    <div id="sec2_brand">
+                        <h2>SONO Brands</h2>
+                    </div>
+                    <div id="sec2_logo_box">
+                        <div class="sec2_top">
+                            <div class="sec2_logo open">
+                                <img src="./img/logo_sono_01.png" alt="소노펠리체">
+                            </div>
+                            <div class="sec2_logo">
+                                <img src="./img/solBeach1.png" alt="쏠비치">
+                            </div>
+                            <div class="sec2_logo">
+                                <img src="./img/logo_sono_03.png" alt="소노캄">
+                            </div>
+                        </div>
+                        <div class="sec2_bot">
+                            <div class="sec2_logo">
+                                <img src="./img/logo_sono_04.png" alt="소노벨">
+                            </div>
+                            <div class="sec2_logo">
+                                <img src="./img/sonoMoon1.png" alt="소노문">
+                            </div>
+                            <div class="sec2_logo">
+                                <img src="./img/logo_sono_06.png" alt="소노휴">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sec2_text_box">
+                        <div class="sec2_text open">
+                            <p>세상에 없던 명예로운 라이프스타일, 차가운 세상에서 동화 속 유토피아로</p>
+                            <p>가까워지는 방법 품격높은 당신에게 가장 어울리는 벗과 우아한 스포츠를 즐기십시오.</p>
+                            <p>그들의 세상 너머, 당신의 세상이 열립니다.</p>
+                        </div>
+                        <div class="sec2_text">
+                            <p>우리가 바다를 좋아하는 이유는</p>
+                            <p>우리로 하여금 우리가 좋아하는 것들을 생각하게 만드는 강력한 힘을 가지기 때문이다.</p>
+                            <p>마음을 흔들고 상상력에 영감을 주는 바다와 함께.</p>
+                        </div>
+                        <div class="sec2_text">
+                            <p>여행은 우리에게 세가지의 유익함을 가져다 줄 것입니다.</p>
+                            <p>하나는 타향에 대한 지식이고, 다른 하나는 고향에 대한 애착이며,</p>
+                            <p>마지막 하나는 우리 자신에 대한 발견입니다.</p>
+                        </div>
+                        <div class="sec2_text">
+                            <p>우리는 목적지에 닿아야 행복해지는 것이 아니라</p>
+                            <p>여행하는 과정에서 행복함을 느낍니다.</p>
+                            <p>그 과정에서 우리 호텔도 하나의 좋은 추억이 되었으면 좋겠습니다.</p>
+                        </div>
+                        <div class="sec2_text">
+                            <p>하늘과 맞닿은 정상에서 우아한 휴식을</p>
+                            <p>노동 뒤의 휴식이야말로 가장 편안하고 순수한 기쁨입니다.</p>
+                            <p>자연이 주는 감동의 휴식을 느껴보십시오.</p>
+                        </div>
+                        <div class="sec2_text">
+                            <p>여행을 고민하고 있다면 가족과 같이 떠나보세요.</p>
+                            <p>마치 한 편의 동화를 읽는 것처럼 잔잔한 재미와 행복을 주듯</p>
+                            <p>가족과 함께하는 여행보다 좋은 여행이 있을까요.</p>
+                        </div>
+                    </div>
+                    <div id="sec2_btn">
+                        <p>혜택 자세히 보기</p>
+                    </div>
+                </div>
+            </section>
+            <section id="sec3">
+                <div id="sec3_bg">
+                    <div class="container-1200">
+                        <div id="sec3_text">
+                            <p>THE PERFECT VENUE FOR YOUR SPECIAL MOMENT</p>
+                            <p>당신의 특별한 순간을</p>
+                            <p>소노호텔앤리조트에서 준비해보세요</p>
+                        </div>
+                        <div id="sec3_btn">
+                            <div class="sec3_btn_box">
+                                <p>미팅 자세히 보기</p>
+                            </div>
+                            <div class="sec3_btn_box">
+                                <p>웨딩 자세히 보기</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="sec4_5_bg_con">
+                <!-- <div id="sec4_5_bg">
+                    <img src="./img/promotion_bg2 (2).png" alt="배경이미지">
+                </div> -->
+                <section id="sec4">
+                    <!-- <div id="sec4_bg">
+                        <img src="./img/promotion_bg2.png" alt="배경이미지">
+                    </div> -->
+                    <div class="sec4_con">
+                        <div id="sec4_title">
+                            <h3>Theme travel</h3>
+                            <p>다양한 리조트를 경험해보세요</p>
+                        </div>
+                        <div class="container-1500">
+                            <div class="container-1200">
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper first_swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="sec4_img">
+                                                <div class="sec4_hover">
+                                                    <img src="./img/main_banner1.jpg" alt="비즈니스사진">
+                                                </div>
+                                                <div class="sec4_text">
+                                                    <h3>비즈니스</h3>
+                                                    <p>비즈니스도 리조트와 함께 해보세요</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="sec4_img">
+                                                <div class="sec4_hover">
+                                                    <img src="./img/main_banner2.jpg" alt="액티비티사진">
+                                                </div>
+                                                <div class="sec4_text">
+                                                    <h3>액티비티</h3>
+                                                    <p>다양한 액티비티를 함께하세요  </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="sec4_img">
+                                                <div class="sec4_hover">
+                                                    <img src="./img/main_banner3.jpg" alt="골프">
+                                                </div>
+                                                <div class="sec4_text">
+                                                    <h3>골프</h3>
+                                                    <p>리조트와 함께 필드를 체험하세요</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="sec4_img">
+                                                <div class="sec4_hover">
+                                                    <img src="./img/main_banner4.jpg" alt="애완동물">
+                                                </div>
+                                                <div class="sec4_text">
+                                                    <h3>애완동물</h3>
+                                                    <p>반려견과 함께 리조트를 경험해보세요</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="sec4_img">
+                                                <div class="sec4_hover">
+                                                    <img src="./img/main_banner5.jpg" alt="승마사진">
+                                                </div>
+                                                <div class="sec4_text">
+                                                    <h3>승마</h3>
+                                                    <p>자유로운 승마를 즐겨보세요</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div> -->
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <!-- Initialize Swiper -->
+                    <script>
+                        var swiper = new Swiper(".first_swiper", {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        speed: 700,
+                        centeredSlides: true,
+                        slidesPerGroup: 1,
+                        loop: true,
+                        loopFillGroupWithBlank: true,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        breakpoints : {
+                            761 : {
+                                slidesPerView: 3,
+                            },
+                            200 : {
+                                slidesPerView: 1,
+                            }
+                        },
+                        });
+                    </script>
+                </section>
+                <section id="sec5">
+                    <div class="container-1200">
+                        <div id="sec5_title">
+                            <h3>Promotion</h3>
+                            <p>다양한 프로모션과 함께해보세요</p>
+                        </div>
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper two_swiper" id="sec5_swiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_01.jfif" alt="오션월드">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>비발디파크</p>
+                                        <p>최대 40% 할인을 받아보세요</p>
+                                        <p>오션월드 온라인 예약</p>
+                                        <p>2022.03.19 ~ 2022.07.15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_02.jfif" alt="와이너리">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>공통</p>
+                                        <p>자연 속에서 즐기는 와이너리 투어</p>
+                                        <p>Winery Tour PKG</p>
+                                        <p>2022.04.15 ~ 2022.06.30</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_03.jfif" alt="솔샘 온천">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>소노벨 청송</p>
+                                        <p>솔샘 온천을 체험해보세요</p>
+                                        <p>5주년 특가 패키지</p>
+                                        <p>2022.06.24 ~ 2022.07.21</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_04.jfif" alt="캠핑 카바나">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>비발디파크</p>
+                                        <p>캠핑 카바나도 소노에서!</p>
+                                        <p>캠핑 카바나 온라인 예약</p>
+                                        <p>2022.03.19 ~ 2022.07.15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_05.jfif" alt="키즈탐험">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>비발디파크</p>
+                                        <p>두릉산의 숨겨진 비밀을 찾아라!</p>
+                                        <p>키즈자연탐험단</p>
+                                        <p>2022.05.02 ~ 2022.12.31</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_12.jpg" alt="제주한달살기">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>소노캄 제주</p>
+                                        <p>꿈꾸던 제주도의 삶</p>
+                                        <p>제주 한달 살기</p>
+                                        <p>2022.06.30 ~ 2022.07.30</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_07.jfif" alt="반려견 동반투숙">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>소노캄 고양</p>
+                                        <p>이제 호텔도 반려견과 함께 오세요</p>
+                                        <p>반려견 동반투숙</p>
+                                        <p>2022.03.19 ~ 2022.07.15</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_08.jfif" alt="요트 체험">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>소노캄 여수</p>
+                                        <p>하루의 마무리를 요트에서</p>
+                                        <p>요트 선셋 체험</p>
+                                        <p>2022.06.23 ~ 2022.07.19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sec5_img">
+                                    <img src="./img/promotion_13.jpg" alt="">
+                                    <div class="hover_opacity">
+                                        <div class="hover_con">
+                                            <img src="./img/ico-sight.png" alt="버튼">
+                                        </div>
+                                    </div>
+                                    <div class="sec5_text">
+                                        <p>소노캄 고양</p>
+                                        <p>호텔 셰프의 요리를 집에서도</p>
+                                        <p>셰프스 키친 홈 케이터링</p>
+                                        <p>2022.05.01 ~ 2022.07.31</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- Initialize Swiper -->
+                        <script>
+                            var swiper = new Swiper(".two_swiper", {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                            slidesPerGroup: 1,
+                            speed: 700,
+                            loop: true,
+                            autoplay: {
+                                delay: 2000,
+                                disableOnInteraction: false,
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                            breakpoints : {
+                                1025 : {
+                                    slidesPerView: 4,
+                                },
+                                761 : {
+                                    slidesPerView: 3,
+                                },
+                                600 : {
+                                    slidesPerView: 2,
+                                },
+                                0 : {
+                                    slidesPerView: 1,
+                                },
+                            },
+                            });
+                        </script>
+                    </div>
+                </section>
+            </div>
+            <section id="sec6">
+                <div id="sec6_con">
+                    <div id="sec6_left">
+                        <h3>SONO Hotel & Resorts</h3>
+                        <h3>MEMBERSHIP</h3>
+                        <p>멤버쉽에 가입하고 많은 혜택을 누려보세요</p>
+                        <div id="sec6_btn">
+                            <p>혜택 자세히 보기</p>
+                        </div>
+                    </div>
+                    <div id="sec6_right">
+                        <div id="sec6_right_left">
+                            <div class="sec6_img_con">
+                                <img src="./img/sale.svg" alt="아이콘">
+                            </div>
+                            <div class="sec6_text">
+                                <p>멤버쉽 앱으로 빠른</p>
+                                <p>예약을해보세요</p>
+                            </div>
+                        </div>
+                        <div id="sec6_right_center">
+                            <div id="sec6_right_left">
+                                <div class="sec6_img_con">
+                                    <img src="./img/gift3.svg" alt="아이콘">
+                                </div>
+                                <div class="sec6_text">
+                                    <p>포인트를 적립하고,</p>
+                                    <p>현금처럼 사용하세요</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sec6_right_right">
+                            <div id="sec6_right_left">
+                                <div class="sec6_img_con">
+                                    <img src="./img/coupon.svg" alt="아이콘">
+                                </div>
+                                <div class="sec6_text">
+                                    <p>회원전용 무료쿠폰 및 최대50%</p>
+                                    <p>할인권을 받아보세요</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="container-1200">
+                    <div id="footer_left">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">뉴스룸</a></li>
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">제휴문의</a></li>
+                            <li><a href="#">웹진사이트맵</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#"> 영상정보처리기기운영관리방침이용약관</a></li>
+                            <li><a href="#">원격지원</a></li>
+                        </ul>
+                        <div id="footer_text">
+                            <p>(주)소노인터내셔널 <span>강원도 홍천군 서면 한치골길 262</span> <span>대표이사 : 민병소</span> <span>개인정보관리 책임자: 김태흥</span></p>
+                            <p>사업자등록번호 : 223-81-08341 <span>통신판매업신고 : 2004-강원홍천-00008</span></p>
+                            <p>소노예약센터 1588-4888 <span>운영시간 09:00 ~ 18:00 (연중무휴)</span> <span>이메일 webmaster@daemyungsono.com</span></p>
+                            <p>COPYRIGHT © SONO INTERNATIONAL Co., Ltd. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div id="footer_right">
+                        <select name="select_name" id="select">
+                            <option>family site</option>
+                            <option>대명소노그룹</option>
+                            <option>대명그룹 홈페이지</option>
+                            <option>대명소노그룹윤리경영</option>
+                            <option>소노펠리체 컨트리클럽</option>
+                            <option>승마클럽</option>
+                            <option>소노펠리체 컨벤션</option>
+                            <option>대명복지재단</option>
+                            <option>소노인터내셔널 건설부문</option>
+                            <option>회원권분양</option>
+                            <option>춘천삼악산케이블카</option>
+                        </select>
+                        <div id="footer_icon_con">
+                            <div class="footer_icon">
+                                <img src="./img/youtube.png" alt="유튜브">
+                            </div>
+                            <div class="footer_icon">
+                                <img src="./img/facebook.png" alt="페이스북">
+                            </div>
+                            <div class="footer_icon">
+                                <img src="./img/instagram.png" alt="인스타그램">
+                            </div>
+                            <div class="footer_icon">
+                                <img src="./img/kakaoplus.png" alt="카카오플러스">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
